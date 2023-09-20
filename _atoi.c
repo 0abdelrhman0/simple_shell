@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * interactive - returns true if shell is interactive mode
- * @info: struct address
+ * interactive - returning to true if the shell is in interactive mood
+ * @info: Means the struct address
  *
- * Return: 1 if interactive mode, 0 otherwise
+ * Return: to 1 if the sell in interactive mood, 0 other thing
  */
 int interactive(info_t *info)
 {
@@ -12,54 +12,54 @@ int interactive(info_t *info)
 }
 
 /**
- * is_delim - checks if character is a delimeter
- * @c: the char to check
- * @delim: the delimeter string
- * Return: 1 if true, 0 if false
+ * is_delim - checking if char a delimeter
+ * @l: the charctar check
+ * @del: Means a delimeter strings
+ * Return: to 1 if it true, 0 if it false
  */
-int is_delim(char c, char *delim)
+int is_delim(char l, char *del)
 {
-	while (*delim)
-		if (*delim++ == c)
+	while (*del)
+		if (*del++ == l)
 			return (1);
 	return (0);
 }
 
 /**
- * _isalpha - checks for alphabetic character
- * @c: The character to input
- * Return: 1 if c is alphabetic, 0 otherwise
+ * _isalpha - checking  alphabet char
+ * @p: The char input
+ * Return: to 1 if p is alphabetic, 0 other thing
  */
 
-int _isalpha(int c)
+int _isalpha(int p)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if ((p >= 'a' && p <= 'z') || (p >= 'A' && p <= 'Z'))
 		return (1);
 	else
 		return (0);
 }
 
 /**
- * _atoi - converts a string to an integer
- * @s: the string to be converted
- * Return: 0 if no numbers in string, converted number otherwise
+ * _atoi - converting the str to integer
+ * @g: the str to convert
+ * Return: to 0 if there is no number of strings, convert num other thing
  */
 
-int _atoi(char *s)
+int _atoi(char *g)
 {
 	int i, sign = 1, flag = 0, output;
 	unsigned int result = 0;
 
-	for (i = 0; s[i] != '\0' && flag != 2; i++)
+	for (i = 0; g[i] != '\0' && flag != 2; i++)
 	{
-		if (s[i] == '-')
+		if (g[i] == '-')
 			sign *= -1;
 
-		if (s[i] >= '0' && s[i] <= '9')
+		if (g[i] >= '0' && g[i] <= '9')
 		{
 			flag = 1;
 			result *= 10;
-			result += (s[i] - '0');
+			result += (g[i] - '0');
 		}
 		else if (flag == 1)
 			flag = 2;
