@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * clear_info - kjasdp jhoiq werb
- * @info: lkasdcf juikmndw
+ * clear_info - dsfkhvgsdlvdsgvl
+ * @info: vbjzb,dmvnxcb,jvnzxb,jh
  */
 void clear_info(info_t *info)
 {
@@ -13,9 +13,9 @@ void clear_info(info_t *info)
 }
 
 /**
- * set_info - jsgtaom ngskloiy wrqvbh
- * @info: afsvu iomnsfrt
- * @av: qhvsboa klredghlmb sjgft
+ * set_info - jfdhjghsfdkjhlgsfdhljdh
+ * @info: hsgdkfhgjshgkjfegsfk
+ * @av: hsb kjcn lkkjcdsa bjbsd
  */
 void set_info(info_t *info, char **av)
 {
@@ -44,16 +44,16 @@ void set_info(info_t *info, char **av)
 }
 
 /**
- * free_info - adcsbnj kloiyw bdv cjdggj
- * @info: wiskodg vadndjkiutwf
- * @All: tsryw iw dgk sgsgdjgtrw
+ * free_info - sdvhbafvhkajfhvkasvh
+ * @info: hgdgvaligvfhe,ajkfvhkaajhv
+ * @all: kgkuhgakgfvkuyafgvahgkvyf,a
  */
-void free_info(info_t *info, int All)
+void free_info(info_t *info, int all)
 {
 	ffree(info->argv);
 	info->argv = NULL;
 	info->path = NULL;
-	if (All)
+	if (all)
 	{
 		if (!info->cmd_buf)
 			free(info->arg);

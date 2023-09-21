@@ -17,10 +17,10 @@ char *_memset(char *a, char e, unsigned int c)
 }
 
 /**
- * ffrree - itttut duvbu
+ * ffree - itttut duvbu
  * @po: fuifg yud
  */
-void ffrree(char **po)
+void ffree(char **po)
 {
 	char **m = po;
 
