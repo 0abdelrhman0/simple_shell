@@ -1,99 +1,99 @@
 #include "shell.h"
 
 /**
- * list_len - determines length of linked list
- * @h: pointer to first node
+ * list_len - qsdcf thn jiogcvb
+ * @t: dfgyuk loihf
  *
- * Return: size of list
+ * Return: pojhgc sdfg
  */
-size_t list_len(const list_t *h)
+size_t list_len(const list_t *t)
 {
-	size_t i = 0;
+	size_t y = 0;
 
-	while (h)
+	while (t)
 	{
-		h = h->next;
-		i++;
+		t = t->next;
+		y++;
 	}
-	return (i);
+	return (y);
 }
 
 /**
- * list_to_strings - returns an array of strings of the list->str
- * @head: pointer to first node
+ * list_to_strings - lkjhgfdz xcvbnmi jngfwd
+ * @head: syjfvjyd ydrydj yrsurdth
  *
- * Return: array of strings
+ * Return: srhjhuff ltkjydt
  */
 char **list_to_strings(list_t *head)
 {
 	list_t *node = head;
-	size_t i = list_len(head), j;
+	size_t y = list_len(head), z;
 	char **strs;
 	char *str;
 
-	if (!head || !i)
+	if (!head || !y)
 		return (NULL);
-	strs = malloc(sizeof(char *) * (i + 1));
+	strs = malloc(sizeof(char *) * (y + 1));
 	if (!strs)
 		return (NULL);
-	for (i = 0; node; node = node->next, i++)
+	for (y = 0; node; node = node->next, y++)
 	{
 		str = malloc(_strlen(node->str) + 1);
 		if (!str)
 		{
-			for (j = 0; j < i; j++)
-				free(strs[j]);
+			for (z = 0; z < y; z++)
+				free(strs[z]);
 			free(strs);
 			return (NULL);
 		}
 
 		str = _strcpy(str, node->str);
-		strs[i] = str;
+		strs[y] = str;
 	}
-	strs[i] = NULL;
+	strs[y] = NULL;
 	return (strs);
 }
 
 
 /**
- * print_list - prints all elements of a list_t linked list
- * @h: pointer to first node
+ * print_list - oieprbvu uiwbclow euflsd kkdlsa zbffli
+ * @t: poweqrebcuxi jkadrwodj
  *
- * Return: size of list
+ * Return: qafsjdkier gsjsk ddkis
  */
-size_t print_list(const list_t *h)
+size_t print_list(const list_t *t)
 {
-	size_t i = 0;
+	size_t y = 0;
 
-	while (h)
+	while (t)
 	{
-		_puts(convert_number(h->num, 10, 0));
+		_puts(convert_number(t->num, 10, 0));
 		_putchar(':');
 		_putchar(' ');
-		_puts(h->str ? h->str : "(nil)");
+		_puts(t->str ? t->str : "(nil)");
 		_puts("\n");
-		h = h->next;
-		i++;
+		t = t->next;
+		y++;
 	}
-	return (i);
+	return (y);
 }
 
 /**
- * node_starts_with - returns node whose string starts with prefix
- * @node: pointer to list head
- * @prefix: string to match
- * @c: the next character after prefix to match
+ * node_starts_with - sowqrefsn mailde kgjfaklwer
+ * @node: awqetw jaloiuevb dhdkjg
+ * @pre: ieyrhnd riles jdgfu
+ * @h: jshrianb jsgfus udhsk
  *
  * Return: match node or null
  */
-list_t *node_starts_with(list_t *node, char *prefix, char c)
+list_t *node_starts_with(list_t *node, char *pre, char h)
 {
 	char *p = NULL;
 
 	while (node)
 	{
-		p = starts_with(node->str, prefix);
-		if (p && ((c == -1) || (*p == c)))
+		p = starts_with(node->str, pre);
+		if (p && ((h == -1) || (*p == h)))
 			return (node);
 		node = node->next;
 	}
@@ -101,22 +101,22 @@ list_t *node_starts_with(list_t *node, char *prefix, char c)
 }
 
 /**
- * get_node_index - gets the index of a node
- * @head: pointer to list head
- * @node: pointer to the node
+ * get_node_index - jashidmdbc bdjskiehdg kaadj
+ * @head: adjbjdak akjdakj djkalse
+ * @node: lowqdbabdhj hdufvndj
  *
- * Return: index of node or -1
+ * Return: weybdjs hdkiw dtalke -1
  */
 ssize_t get_node_index(list_t *head, list_t *node)
 {
-	size_t i = 0;
+	size_t y = 0;
 
 	while (head)
 	{
 		if (head == node)
-			return (i);
+			return (y);
 		head = head->next;
-		i++;
+		y++;
 	}
 	return (-1);
 }

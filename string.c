@@ -1,75 +1,75 @@
 #include "shell.h"
 
 /**
- * _strlen - returns the length of a string
- * @s: the string whose length to check
+ * _strlen - fckvuit yvgyjvd uyyyyrdjufyjy.
+ * @c: tjyfkfutug ygvjhk ffhfxytrcj
  *
- * Return: integer length of string
+ * Return: mbnvhxh tygjgi
  */
-int _strlen(char *s)
+int _strlen(char *c)
 {
-	int i = 0;
+	int y = 0;
 
-	if (!s)
+	if (!c)
 		return (0);
 
-	while (*s++)
-		i++;
-	return (i);
+	while (*c++)
+		y++;
+	return (y);
 }
 
 /**
- * _strcmp - performs lexicogarphic comparison of two strangs.
- * @s1: the first strang
- * @s2: the second strang
+ * _strcmp - tryt uyiuhgcvb bnjdhjkmn szxdcfvgj
+ * @s6: fgvbhnj rftgyhuj
+ * @s7: cfvgbhnj vghbjnkm
  *
- * Return: negative if s1 < s2, positive if s1 > s2, zero if s1 == s2
+ * Return: negative if s6 < s7, positive if s6 > s7, zero if s6 == s7
  */
-int _strcmp(char *s1, char *s2)
+int _strcmp(char *s6, char *s7)
 {
-	while (*s1 && *s2)
+	while (*s6 && *s7)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-		s1++;
-		s2++;
+		if (*s6 != *s7)
+			return (*s6 - *s7);
+		s6++;
+		s7++;
 	}
-	if (*s1 == *s2)
+	if (*s6 == *s7)
 		return (0);
 	else
-		return (*s1 < *s2 ? -1 : 1);
+		return (*s6 < *s7 ? -1 : 1);
 }
 
 /**
- * starts_with - checks if needle starts with haystack
- * @haystack: string to search
- * @needle: the substring to find
+ * starts_with - vgjvsjv jhgvjh fhcvmsdhhv
+ * @ck: poiuye rtyu xcvbn
+ * @le: xcvbnm mosiutft ghkhjlfcgv
  *
- * Return: address of next char of haystack or NULL
+ * Return: lkjas dfghjkty euigvbc
  */
-char *starts_with(const char *haystack, const char *needle)
+char *starts_with(const char *ck, const char *le)
 {
-	while (*needle)
-		if (*needle++ != *haystack++)
+	while (*le)
+		if (*le++ != *ck++)
 			return (NULL);
-	return ((char *)haystack);
+	return ((char *)ck);
 }
 
 /**
- * _strcat - concatenates two strings
- * @dest: the destination buffer
- * @src: the source buffer
+ * _strcat - zxcv bnpoi uyrfdxcvkm
+ * @destt: fgvjhkjv jlkcbvnbm nuyigghmv
+ * @srrc: poihbnj gfsfvkhblj
  *
- * Return: pointer to destination buffer
+ * Return: sdfghjs fcgkbn vnmb
  */
-char *_strcat(char *dest, char *src)
+char *_strcat(char *destt, char *srrc)
 {
-	char *ret = dest;
+	char *reet = destt;
 
-	while (*dest)
-		dest++;
-	while (*src)
-		*dest++ = *src++;
-	*dest = *src;
-	return (ret);
+	while (*destt)
+		destt++;
+	while (*srrc)
+		*destt++ = *srrc++;
+	*destt = *srrc;
+	return (reet);
 }

@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * is_cmd - determines if a file is an executable command
- * @info: the info struct
- * @path: path to the file
+ * is_cmd - ogjysr utsrdfyf ydjfy
+ * @info: fdsjgkcsk
+ * @path: dytkcrt fjkfdd
  *
- * Return: 1 if true, 0 otherwise
+ * Return: 1 dhjgh, 0 jfxfjg
  */
 int is_cmd(info_t *info, char *path)
 {
@@ -24,38 +24,38 @@ int is_cmd(info_t *info, char *path)
 
 /**
  * dup_chars - duplicates characters
- * @pathstr: the PATH string
- * @start: starting index
- * @stop: stopping index
+ * @pathe: gfghgyt fghu
+ * @start: gfukuylh ruf
+ * @stop: kuyfuyg ufukgy
  *
- * Return: pointer to new buffer
+ * Return: fhjyd utrdftv utyf
  */
-char *dup_chars(char *pathstr, int start, int stop)
+char *dup_chars(char *pathe, int start, int stop)
 {
 	static char buf[1024];
-	int i = 0, k = 0;
+	int y = 0, c = 0;
 
-	for (k = 0, i = start; i < stop; i++)
-		if (pathstr[i] != ':')
-			buf[k++] = pathstr[i];
-	buf[k] = 0;
+	for (c = 0, y = start; y < stop; y++)
+		if (pathe[y] != ':')
+			buf[c++] = pathe[y];
+	buf[c] = 0;
 	return (buf);
 }
 
 /**
- * find_path - finds this cmd in the PATH string
- * @info: the info struct
- * @pathstr: the PATH string
- * @cmd: the cmd to find
+ * find_path - fjhhk yfvyt ydubfg yfvjyg
+ * @info: rfghj tdfvkn fhxt
+ * @pathe: jdtfg iytdfgb fft
+ * @cmd: kjhes cvbwrty jnbv
  *
- * Return: full path of cmd if found or NULL
+ * Return: dcvjkk dhrcdrf tffdfb
  */
-char *find_path(info_t *info, char *pathstr, char *cmd)
+char *find_path(info_t *info, char *pathe, char *cmd)
 {
-	int i = 0, curr_pos = 0;
+	int y = 0, curr_pos = 0;
 	char *path;
 
-	if (!pathstr)
+	if (!pathe)
 		return (NULL);
 	if ((_strlen(cmd) > 2) && starts_with(cmd, "./"))
 	{
@@ -64,9 +64,9 @@ char *find_path(info_t *info, char *pathstr, char *cmd)
 	}
 	while (1)
 	{
-		if (!pathstr[i] || pathstr[i] == ':')
+		if (!pathe[y] || pathe[y] == ':')
 		{
-			path = dup_chars(pathstr, curr_pos, i);
+			path = dup_chars(pathe, curr_pos, y);
 			if (!*path)
 				_strcat(path, cmd);
 			else
@@ -76,11 +76,11 @@ char *find_path(info_t *info, char *pathstr, char *cmd)
 			}
 			if (is_cmd(info, path))
 				return (path);
-			if (!pathstr[i])
+			if (!pathe[y])
 				break;
-			curr_pos = i;
+			curr_pos = y;
 		}
-		i++;
+		y++;
 	}
 	return (NULL);
 }
